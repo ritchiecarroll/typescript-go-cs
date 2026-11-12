@@ -1,5 +1,7 @@
 # typescript-go-cs
 
+[![converted by go2cs](https://img.shields.io/badge/converted%20by-go2cs-68217A)](https://go2cs.net)
+
 TypeScript's native Go port (the `tsc` module of [microsoft/TypeScript](https://github.com/microsoft/TypeScript))
 converted to C# by [go2cs](https://github.com/ritchiecarroll/go2cs) and run against the native Go build's own outputs.
 It is pinned to the last TypeScript commit before TypeScript moved to Go 1.27, and moves forward when go2cs does.
@@ -59,4 +61,4 @@ run slower in .NET than the native Go build.
 
 ---
 
-<sub><a href="https://go2cs.net"><img src="https://go2cs.net/images/go2cs-small.png" height="20" align="absmiddle" alt="go2cs logo"></a>&nbsp;Converted from Go to C# by <a href="https://github.com/ritchiecarroll/go2cs">go2cs</a>.</sub>
+<sub>Converted from Go to C# by [go2cs](https://github.com/ritchiecarroll/go2cs).</sub>
