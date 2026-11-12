@@ -3,7 +3,7 @@
 TypeScript's Go port ([microsoft/typescript](https://github.com/microsoft/typescript)) converted to C# by [go2cs](https://github.com/ritchiecarroll/go2cs) and run against the native Go build's own outputs. This port is currently pinned at Go version 1.26 until go2cs migrates to 1.27.
 
 > [!IMPORTANT]
-> **This is a work in progress, and a proof of what go2cs can do. It is not a TypeScript compiler for .NET.** To compile
+> **This is a work in progress, and a proof of what go2cs can do, i.e., produce operational .NET code transpiled from Go source. The code in this repository is \*\*_not_\*\* intended to replace the official Go TypeScript compiler.** To compile
 > TypeScript, use the official [TypeScript](https://www.typescriptlang.org/) toolchain. This repository is not
 > affiliated with or endorsed by Microsoft or the TypeScript team. TypeScript is a trademark of Microsoft; its name is
 > used here only to say what was converted.
@@ -41,7 +41,7 @@ How it was measured:
   `internal/project` and `internal/fourslash`. Each one uses a generic constraint that go2cs cannot yet express in C#,
   and none of them is part of the parse, type-check or emit path measured above.
 
-Performance is not a goal of this proof, and no timings are given.
+Performance parity is not a goal of go2cs, nor of this proof, see [FAQ](https://go2cs.net/FAQ.html#is-converted-code-slower-than-go). go2cs strives to bring Go code to .NET with visual and behavioral parity first, performance optimizations are currently secondary. You should expect converted TypeScript Go code running in .NET to be slower.
 
 ## Licenses
 
@@ -49,3 +49,9 @@ Performance is not a goal of this proof, and no timings are given.
   `LICENSE.txt` and `NOTICE.txt` verbatim, the notices of each third-party Go module it includes, and a record of every
   change made to the source.
 - go2cs, the converter, is licensed separately; see its repository.
+
+---
+
+![go2cs](https://go2cs.net/images/go2cs-small.png)
+
+This project was converted by [go2cs](https://github.com/ritchiecarroll/go2cs) — the official Go to C# Converter.
