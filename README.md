@@ -59,4 +59,4 @@ run slower in .NET than the native Go build.
   change made to the source.
 - go2cs, the converter, is licensed separately; see its repository.
 
-[go2cs-badge]: .github/go2cs-badge.svg
+[go2cs-badge]: https://go2cs.net/images/go2cs-badge.svg
