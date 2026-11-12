@@ -1,7 +1,6 @@
 # typescript-go-cs
 
-TypeScript's Go port ([microsoft/typescript-go](https://github.com/microsoft/typescript-go)) converted to C# by
-[go2cs](https://github.com/ritchiecarroll/go2cs), and run against the native Go build's own outputs.
+TypeScript's Go port ([microsoft/typescript](https://github.com/microsoft/typescript)) converted to C# by [go2cs](https://github.com/ritchiecarroll/go2cs) and run against the native Go build's own outputs. This port is currently pinned at Go version 1.26 until go2cs migrates to 1.27.
 
 > [!IMPORTANT]
 > **This is a work in progress, and a proof of what go2cs can do. It is not a TypeScript compiler for .NET.** To compile
@@ -10,10 +9,6 @@ TypeScript's Go port ([microsoft/typescript-go](https://github.com/microsoft/typ
 > used here only to say what was converted.
 
 ## Status
-
-> [!NOTE]
-> **The converted code is not in this repository yet.** It arrives built against go2cs's published NuGet packages. It is
-> measured again at that point, and the numbers below are then replaced by that reading.
 
 The numbers below are measured, not projected. They come from a pre-release go2cs build (go2cs master `06610aaa65`) on
 linux/amd64. Every comparison is byte-for-byte against the native Go build of the same TypeScript source.
