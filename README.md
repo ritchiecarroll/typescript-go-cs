@@ -15,9 +15,10 @@ It is pinned to the last TypeScript commit before TypeScript moved to Go 1.27, a
 
 ## Status
 
-The numbers below are measured, not projected. They come from a pre-release go2cs build (go2cs commit `06610aaa65`) on
-linux/amd64. Every comparison is byte-for-byte against the native Go build of the same TypeScript source. The converted
-code itself lands here once it is built against go2cs's published packages, and it is measured again then.
+The numbers below are measured, not projected. They come from the released go2cs 1.26.11.1 (go2cs commit `5dd5cafd5b`),
+built against the go.* 1.26.11.1 packages on nuget.org and compared against go1.26.11, on linux/amd64 on 2026-11-20.
+Every comparison is byte-for-byte against the native Go build of the same TypeScript source; [PROOF.md](PROOF.md) has
+the method and both sides' outputs.
 
 | What runs, converted to C# | Result |
 |---|---|
@@ -52,11 +53,44 @@ Performance parity is not a goal of go2cs, nor of this proof (see the
 and behavioral parity first; performance optimizations are currently secondary. Expect the converted TypeScript code to
 run slower in .NET than the native Go build.
 
+The demo projects turn on server garbage collection with dynamic adaptation off. That makes type-check faster and uses
+more memory; go2cs's [tuning guide](https://go2cs.net/Tuning.html) explains the setting.
+
+## What is here
+
+| Path | What it is |
+|:--|:--|
+| `src/github.com/microsoft/TypeScript/tsc/internal/…` | The 48 TypeScript packages the four demos need, converted by go2cs. Do not edit them: change the Go and convert again. |
+| `src/github.com/microsoft/TypeScript/tsc/cmd/…` | The four demos, converted. Their Go sources are under `go/cmd/`. |
+| `pkg/…` | The 12 third-party Go packages they import, converted, each module with its own license at its root. |
+| `go/` | The Go sources this project added: the four demos and the corpus extractor. They are not part of TypeScript. |
+| `samples/`, `proof/` | The demo inputs, the harness and its measured outputs. |
+| `LICENSE`, `NOTICE.txt` | TypeScript's Apache-2.0 license and its notices, verbatim. |
+| `MODIFICATIONS.md` | What was changed and what was added, as the license requires. |
+
+## Building and running
+
+Building needs the .NET 10 SDK. The restore takes the go2cs standard library (`go.*`) from nuget.org.
+
+```
+dotnet build src/github.com/microsoft/TypeScript/tsc/cmd/checkdemo/checkdemo.csproj -c Release -p:GoStdLibVersion=1.26.11.1
+dotnet run --project src/github.com/microsoft/TypeScript/tsc/cmd/checkdemo/checkdemo.csproj -c Release -p:GoStdLibVersion=1.26.11.1 -- samples/check.ts
+```
+
+The same two commands build and run `parsedemo`, `emitdemo` (one or more `.ts` files) and `mfdemo` (one or more
+project directories). [PROOF.md](PROOF.md) shows how to run each comparison.
+
+## Provenance
+
+- **Converted:** with `go2cs -recurse=nuget` at go2cs commit `5dd5cafd5b`.
+- **Built:** against go.* `1.26.11.1` with the .NET SDK 10.0.400.
+- **Compared:** against go1.26.11 building the same Go sources, unmodified.
+
 ## Licenses
 
-- TypeScript is licensed under the Apache License 2.0. When the converted code arrives, it brings TypeScript's
-  `LICENSE.txt` and `NOTICE.txt` verbatim, the notices of each third-party Go module it includes, and a record of every
-  change made to the source.
+- TypeScript is licensed under the Apache License 2.0. The converted code carries TypeScript's license
+  ([LICENSE](LICENSE)) and [NOTICE.txt](NOTICE.txt) verbatim, each third-party Go module's license at its root under
+  `pkg/`, and [MODIFICATIONS.md](MODIFICATIONS.md), the record of every change made to the source.
 - go2cs, the converter, is licensed separately; see its repository.
 
-[go2cs-badge]: https://go2cs.net/images/go2cs-badge.svg
+[go2cs-badge]: https://cdn.jsdelivr.net/gh/ritchiecarroll/go2cs@master/docs/images/go2cs-badge.svg

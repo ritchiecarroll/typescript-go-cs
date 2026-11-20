@@ -1,0 +1,72 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/src/">
+    <Project Path="../../internal/ast/github.com.microsoft.TypeScript.tsc.internal.ast.csproj" />
+    <Project Path="../../internal/astnav/github.com.microsoft.TypeScript.tsc.internal.astnav.csproj" />
+    <Project Path="../../internal/binder/github.com.microsoft.TypeScript.tsc.internal.binder.csproj" />
+    <Project Path="../../internal/bundled/github.com.microsoft.TypeScript.tsc.internal.bundled.csproj" />
+    <Project Path="../../internal/checker/github.com.microsoft.TypeScript.tsc.internal.checker.csproj" />
+    <Project Path="../../internal/collections/github.com.microsoft.TypeScript.tsc.internal.collections.csproj" />
+    <Project Path="../../internal/compiler/github.com.microsoft.TypeScript.tsc.internal.compiler.csproj" />
+    <Project Path="../../internal/contentmapper/github.com.microsoft.TypeScript.tsc.internal.contentmapper.csproj" />
+    <Project Path="../../internal/core/github.com.microsoft.TypeScript.tsc.internal.core.csproj" />
+    <Project Path="../../internal/debug/github.com.microsoft.TypeScript.tsc.internal.debug.csproj" />
+    <Project Path="../../internal/diagnostics/github.com.microsoft.TypeScript.tsc.internal.diagnostics.csproj" />
+    <Project Path="../../internal/evaluator/github.com.microsoft.TypeScript.tsc.internal.evaluator.csproj" />
+    <Project Path="../../internal/glob/github.com.microsoft.TypeScript.tsc.internal.glob.csproj" />
+    <Project Path="../../internal/ipc/github.com.microsoft.TypeScript.tsc.internal.ipc.csproj" />
+    <Project Path="../../internal/jsnum/github.com.microsoft.TypeScript.tsc.internal.jsnum.csproj" />
+    <Project Path="../../internal/json/github.com.microsoft.TypeScript.tsc.internal.json.csproj" />
+    <Project Path="../../internal/jsonrpc/github.com.microsoft.TypeScript.tsc.internal.jsonrpc.csproj" />
+    <Project Path="../../internal/locale/github.com.microsoft.TypeScript.tsc.internal.locale.csproj" />
+    <Project Path="../../internal/module/github.com.microsoft.TypeScript.tsc.internal.module.csproj" />
+    <Project Path="../../internal/modulespecifiers/github.com.microsoft.TypeScript.tsc.internal.modulespecifiers.csproj" />
+    <Project Path="../../internal/nodebuilder/github.com.microsoft.TypeScript.tsc.internal.nodebuilder.csproj" />
+    <Project Path="../../internal/outputpaths/github.com.microsoft.TypeScript.tsc.internal.outputpaths.csproj" />
+    <Project Path="../../internal/packagejson/github.com.microsoft.TypeScript.tsc.internal.packagejson.csproj" />
+    <Project Path="../../internal/parser/github.com.microsoft.TypeScript.tsc.internal.parser.csproj" />
+    <Project Path="../../internal/printer/github.com.microsoft.TypeScript.tsc.internal.printer.csproj" />
+    <Project Path="../../internal/pseudochecker/github.com.microsoft.TypeScript.tsc.internal.pseudochecker.csproj" />
+    <Project Path="../../internal/scanner/github.com.microsoft.TypeScript.tsc.internal.scanner.csproj" />
+    <Project Path="../../internal/semver/github.com.microsoft.TypeScript.tsc.internal.semver.csproj" />
+    <Project Path="../../internal/sourcemap/github.com.microsoft.TypeScript.tsc.internal.sourcemap.csproj" />
+    <Project Path="../../internal/spanmap/github.com.microsoft.TypeScript.tsc.internal.spanmap.csproj" />
+    <Project Path="../../internal/stringutil/github.com.microsoft.TypeScript.tsc.internal.stringutil.csproj" />
+    <Project Path="../../internal/symlinks/github.com.microsoft.TypeScript.tsc.internal.symlinks.csproj" />
+    <Project Path="../../internal/tracing/github.com.microsoft.TypeScript.tsc.internal.tracing.csproj" />
+    <Project Path="../../internal/transformers/declarations/github.com.microsoft.TypeScript.tsc.internal.transformers.declarations.csproj" />
+    <Project Path="../../internal/transformers/estransforms/github.com.microsoft.TypeScript.tsc.internal.transformers.estransforms.csproj" />
+    <Project Path="../../internal/transformers/github.com.microsoft.TypeScript.tsc.internal.transformers.csproj" />
+    <Project Path="../../internal/transformers/inliners/github.com.microsoft.TypeScript.tsc.internal.transformers.inliners.csproj" />
+    <Project Path="../../internal/transformers/jsxtransforms/github.com.microsoft.TypeScript.tsc.internal.transformers.jsxtransforms.csproj" />
+    <Project Path="../../internal/transformers/moduletransforms/github.com.microsoft.TypeScript.tsc.internal.transformers.moduletransforms.csproj" />
+    <Project Path="../../internal/transformers/tstransforms/github.com.microsoft.TypeScript.tsc.internal.transformers.tstransforms.csproj" />
+    <Project Path="../../internal/tsoptions/github.com.microsoft.TypeScript.tsc.internal.tsoptions.csproj" />
+    <Project Path="../../internal/tspath/github.com.microsoft.TypeScript.tsc.internal.tspath.csproj" />
+    <Project Path="../../internal/vfs/cachedvfs/github.com.microsoft.TypeScript.tsc.internal.vfs.cachedvfs.csproj" />
+    <Project Path="../../internal/vfs/github.com.microsoft.TypeScript.tsc.internal.vfs.csproj" />
+    <Project Path="../../internal/vfs/internal/github.com.microsoft.TypeScript.tsc.internal.vfs.internal.csproj" />
+    <Project Path="../../internal/vfs/iovfs/github.com.microsoft.TypeScript.tsc.internal.vfs.iovfs.csproj" />
+    <Project Path="../../internal/vfs/vfsmatch/github.com.microsoft.TypeScript.tsc.internal.vfs.vfsmatch.csproj" />
+    <Project Path="../../internal/vfs/vfstest/github.com.microsoft.TypeScript.tsc.internal.vfs.vfstest.csproj" />
+    <Project Path="mfdemo.csproj" DefaultStartup="true" />
+  </Folder>
+  <Folder Name="/pkg/">
+    <Project Path="../../../../../../../pkg/github.com/go-json-experiment/json/github.com.go-json-experiment.json.csproj" />
+    <Project Path="../../../../../../../pkg/github.com/go-json-experiment/json/internal/github.com.go-json-experiment.json.internal.csproj" />
+    <Project Path="../../../../../../../pkg/github.com/go-json-experiment/json/internal/jsonflags/github.com.go-json-experiment.json.internal.jsonflags.csproj" />
+    <Project Path="../../../../../../../pkg/github.com/go-json-experiment/json/internal/jsonopts/github.com.go-json-experiment.json.internal.jsonopts.csproj" />
+    <Project Path="../../../../../../../pkg/github.com/go-json-experiment/json/internal/jsonwire/github.com.go-json-experiment.json.internal.jsonwire.csproj" />
+    <Project Path="../../../../../../../pkg/github.com/go-json-experiment/json/jsontext/github.com.go-json-experiment.json.jsontext.csproj" />
+    <Project Path="../../../../../../../pkg/github.com/zeebo/xxh3/github.com.zeebo.xxh3.csproj" />
+    <Project Path="../../../../../../../pkg/golang.org/x/sync/errgroup/golang.org.x.sync.errgroup.csproj" />
+    <Project Path="../../../../../../../pkg/golang.org/x/text/internal/language/compact/golang.org.x.text.internal.language.compact.csproj" />
+    <Project Path="../../../../../../../pkg/golang.org/x/text/internal/language/golang.org.x.text.internal.language.csproj" />
+    <Project Path="../../../../../../../pkg/golang.org/x/text/internal/tag/golang.org.x.text.internal.tag.csproj" />
+    <Project Path="../../../../../../../pkg/golang.org/x/text/language/golang.org.x.text.language.csproj" />
+  </Folder>
+</Solution>

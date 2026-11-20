@@ -1,0 +1,23 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/src/">
+    <Project Path="../../collections/github.com.microsoft.TypeScript.tsc.internal.collections.csproj" />
+    <Project Path="../../json/github.com.microsoft.TypeScript.tsc.internal.json.csproj" />
+    <Project Path="../../stringutil/github.com.microsoft.TypeScript.tsc.internal.stringutil.csproj" />
+    <Project Path="../../tspath/github.com.microsoft.TypeScript.tsc.internal.tspath.csproj" />
+    <Project Path="../github.com.microsoft.TypeScript.tsc.internal.vfs.csproj" />
+    <Project Path="github.com.microsoft.TypeScript.tsc.internal.vfs.cachedvfs.csproj" DefaultStartup="true" />
+  </Folder>
+  <Folder Name="/pkg/">
+    <Project Path="../../../../../../../../pkg/github.com/go-json-experiment/json/github.com.go-json-experiment.json.csproj" />
+    <Project Path="../../../../../../../../pkg/github.com/go-json-experiment/json/internal/github.com.go-json-experiment.json.internal.csproj" />
+    <Project Path="../../../../../../../../pkg/github.com/go-json-experiment/json/internal/jsonflags/github.com.go-json-experiment.json.internal.jsonflags.csproj" />
+    <Project Path="../../../../../../../../pkg/github.com/go-json-experiment/json/internal/jsonopts/github.com.go-json-experiment.json.internal.jsonopts.csproj" />
+    <Project Path="../../../../../../../../pkg/github.com/go-json-experiment/json/internal/jsonwire/github.com.go-json-experiment.json.internal.jsonwire.csproj" />
+    <Project Path="../../../../../../../../pkg/github.com/go-json-experiment/json/jsontext/github.com.go-json-experiment.json.jsontext.csproj" />
+  </Folder>
+</Solution>

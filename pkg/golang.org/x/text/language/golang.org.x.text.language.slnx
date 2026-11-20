@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/pkg/">
+    <Project Path="../internal/language/compact/golang.org.x.text.internal.language.compact.csproj" />
+    <Project Path="../internal/language/golang.org.x.text.internal.language.csproj" />
+    <Project Path="../internal/tag/golang.org.x.text.internal.tag.csproj" />
+    <Project Path="golang.org.x.text.language.csproj" DefaultStartup="true" />
+  </Folder>
+</Solution>

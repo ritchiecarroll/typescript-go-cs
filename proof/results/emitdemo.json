@@ -1,0 +1,25 @@
+{
+ "name": "emitdemo",
+ "args": [
+  "good.ts",
+  "bad.ts",
+  "emit.ts"
+ ],
+ "go": {
+  "rc": 0,
+  "bytes": 3850,
+  "lines": 155,
+  "sha256": "f389781332e59c387a301d155ed04cbff086dd36d810b574cd2c332ca91e839e",
+  "seconds": 1.2,
+  "stderr_tail": ""
+ },
+ "cs": {
+  "rc": 0,
+  "bytes": 3850,
+  "lines": 155,
+  "sha256": "f389781332e59c387a301d155ed04cbff086dd36d810b574cd2c332ca91e839e",
+  "seconds": 7.8,
+  "stderr_tail": ""
+ },
+ "match": true
+}

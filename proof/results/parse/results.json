@@ -1,0 +1,59 @@
+{
+ "demo": {
+  "go": {
+   "rc": 0,
+   "bytes": 8101,
+   "lines": 211,
+   "sha256": "3d40bddc3d75717f5da37d7fbcf0c25bfd6a731aaf0d51174109c070e0d002ae",
+   "seconds": 0.4,
+   "stderr_tail": ""
+  },
+  "cs": {
+   "rc": 0,
+   "bytes": 8101,
+   "lines": 211,
+   "sha256": "3d40bddc3d75717f5da37d7fbcf0c25bfd6a731aaf0d51174109c070e0d002ae",
+   "seconds": 7.9,
+   "stderr_tail": ""
+  },
+  "match": true
+ },
+ "corpus": {
+  "units": 17422,
+  "matched": 17422,
+  "mismatched": 0,
+  "classes": {},
+  "rechecked_by_unit": [],
+  "native": {
+   "seconds": 5.0,
+   "runs": [
+    {
+     "from": "00000",
+     "rc": 0,
+     "lines": 17422,
+     "seconds": 5.0,
+     "stderr_tail": ""
+    }
+   ],
+   "crashes": [],
+   "sha256": "098ec1ba7a084ea95abdc50f04bfaebc955127c2d7a3e17c72117cdf7161408a"
+  },
+  "converted": {
+   "seconds": 22.1,
+   "runs": [
+    {
+     "from": "00000",
+     "rc": 0,
+     "lines": 17422,
+     "seconds": 22.1,
+     "stderr_tail": ""
+    }
+   ],
+   "crashes": [],
+   "sha256": "098ec1ba7a084ea95abdc50f04bfaebc955127c2d7a3e17c72117cdf7161408a"
+  },
+  "nodes": 2583651,
+  "diagnostics": 3815,
+  "mismatches": []
+ }
+}

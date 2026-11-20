@@ -1,0 +1,15 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/pkg/">
+    <Project Path="github.com.go-json-experiment.json.csproj" DefaultStartup="true" />
+    <Project Path="internal/github.com.go-json-experiment.json.internal.csproj" />
+    <Project Path="internal/jsonflags/github.com.go-json-experiment.json.internal.jsonflags.csproj" />
+    <Project Path="internal/jsonopts/github.com.go-json-experiment.json.internal.jsonopts.csproj" />
+    <Project Path="internal/jsonwire/github.com.go-json-experiment.json.internal.jsonwire.csproj" />
+    <Project Path="jsontext/github.com.go-json-experiment.json.jsontext.csproj" />
+  </Folder>
+</Solution>

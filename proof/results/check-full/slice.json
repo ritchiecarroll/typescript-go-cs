@@ -1,0 +1,12 @@
+{
+ "pool": 7404,
+ "every": 1,
+ "units": 7404,
+ "matched": 7404,
+ "classes": {},
+ "seconds": {
+  "go": 306.2,
+  "cs": 8205.8
+ },
+ "mismatches": []
+}

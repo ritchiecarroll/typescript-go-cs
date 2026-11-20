@@ -1,0 +1,14 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/src/">
+    <Project Path="../../stringutil/github.com.microsoft.TypeScript.tsc.internal.stringutil.csproj" />
+    <Project Path="../../tspath/github.com.microsoft.TypeScript.tsc.internal.tspath.csproj" />
+    <Project Path="../github.com.microsoft.TypeScript.tsc.internal.vfs.csproj" />
+    <Project Path="../internal/github.com.microsoft.TypeScript.tsc.internal.vfs.internal.csproj" />
+    <Project Path="github.com.microsoft.TypeScript.tsc.internal.vfs.iovfs.csproj" DefaultStartup="true" />
+  </Folder>
+</Solution>

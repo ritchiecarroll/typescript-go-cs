@@ -1,0 +1,24 @@
+{
+ "name": "mfdemo",
+ "args": [
+  "shop",
+  "legacy"
+ ],
+ "go": {
+  "rc": 0,
+  "bytes": 15880,
+  "lines": 320,
+  "sha256": "137a39c5686c3a3682732ea18075cc52c3c3d8854bd9215b45e3844cdc548c81",
+  "seconds": 1.6,
+  "stderr_tail": ""
+ },
+ "cs": {
+  "rc": 0,
+  "bytes": 15880,
+  "lines": 320,
+  "sha256": "137a39c5686c3a3682732ea18075cc52c3c3d8854bd9215b45e3844cdc548c81",
+  "seconds": 14.3,
+  "stderr_tail": ""
+ },
+ "match": true
+}

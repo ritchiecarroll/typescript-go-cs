@@ -1,0 +1,24 @@
+{
+ "name": "checkdemo",
+ "args": [
+  "check.ts",
+  "good.ts"
+ ],
+ "go": {
+  "rc": 0,
+  "bytes": 318,
+  "lines": 7,
+  "sha256": "7881a8e0c0d9466cc230a039d93ea66807d9a371f9ce5466a55c94eab8aa4a90",
+  "seconds": 1.2,
+  "stderr_tail": ""
+ },
+ "cs": {
+  "rc": 0,
+  "bytes": 318,
+  "lines": 7,
+  "sha256": "7881a8e0c0d9466cc230a039d93ea66807d9a371f9ce5466a55c94eab8aa4a90",
+  "seconds": 12.2,
+  "stderr_tail": ""
+ },
+ "match": true
+}

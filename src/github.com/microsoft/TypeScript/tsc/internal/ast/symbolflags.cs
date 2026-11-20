@@ -1,0 +1,75 @@
+namespace go.github.com.microsoft.TypeScript.tsc.@internal;
+
+partial class ast_package {
+
+partial struct SymbolFlags /*num:uint32*/;
+
+public static SymbolFlags SymbolFlagsNone => 0;
+public static SymbolFlags SymbolFlagsFunctionScopedVariable => /* 1 << 0 */ 1;
+public static SymbolFlags SymbolFlagsBlockScopedVariable => /* 1 << 1 */ 2;
+public static SymbolFlags SymbolFlagsProperty => /* 1 << 2 */ 4;
+public static SymbolFlags SymbolFlagsEnumMember => /* 1 << 3 */ 8;
+public static SymbolFlags SymbolFlagsFunction => /* 1 << 4 */ 16;
+public static SymbolFlags SymbolFlagsClass => /* 1 << 5 */ 32;
+public static SymbolFlags SymbolFlagsInterface => /* 1 << 6 */ 64;
+public static SymbolFlags SymbolFlagsConstEnum => /* 1 << 7 */ 128;
+public static SymbolFlags SymbolFlagsRegularEnum => /* 1 << 8 */ 256;
+public static SymbolFlags SymbolFlagsValueModule => /* 1 << 9 */ 512;
+public static SymbolFlags SymbolFlagsNamespaceModule => /* 1 << 10 */ 1024;
+public static SymbolFlags SymbolFlagsTypeLiteral => /* 1 << 11 */ 2048;
+public static SymbolFlags SymbolFlagsObjectLiteral => /* 1 << 12 */ 4096;
+public static SymbolFlags SymbolFlagsMethod => /* 1 << 13 */ 8192;
+public static SymbolFlags SymbolFlagsConstructor => /* 1 << 14 */ 16384;
+public static SymbolFlags SymbolFlagsGetAccessor => /* 1 << 15 */ 32768;
+public static SymbolFlags SymbolFlagsSetAccessor => /* 1 << 16 */ 65536;
+public static SymbolFlags SymbolFlagsSignature => /* 1 << 17 */ 131072;
+public static SymbolFlags SymbolFlagsTypeParameter => /* 1 << 18 */ 262144;
+public static SymbolFlags SymbolFlagsTypeAlias => /* 1 << 19 */ 524288;
+public static SymbolFlags SymbolFlagsExportValue => /* 1 << 20 */ 1048576;
+public static SymbolFlags SymbolFlagsAlias => /* 1 << 21 */ 2097152;
+public static SymbolFlags SymbolFlagsPrototype => /* 1 << 22 */ 4194304;
+public static SymbolFlags SymbolFlagsExportStar => /* 1 << 23 */ 8388608;
+public static SymbolFlags SymbolFlagsOptional => /* 1 << 24 */ 16777216;
+public static SymbolFlags SymbolFlagsTransient => /* 1 << 25 */ 33554432;
+public static SymbolFlags SymbolFlagsAssignment => /* 1 << 26 */ 67108864;
+public static SymbolFlags SymbolFlagsModuleExports => /* 1 << 27 */ 134217728;
+public static SymbolFlags SymbolFlagsConstEnumOnlyModule => /* 1 << 28 */ 268435456;
+public static SymbolFlags SymbolFlagsReplaceableByMethod => /* 1 << 29 */ 536870912;
+public static SymbolFlags SymbolFlagsGlobalLookup => /* 1 << 30 */ 1073741824;
+public static SymbolFlags SymbolFlagsAll => /* 1<<30 - 1 */ 1073741823;
+public static SymbolFlags SymbolFlagsEnum => /* SymbolFlagsRegularEnum | SymbolFlagsConstEnum */ 384;
+public static SymbolFlags SymbolFlagsVariable => /* SymbolFlagsFunctionScopedVariable | SymbolFlagsBlockScopedVariable */ 3;
+public static SymbolFlags SymbolFlagsValue => /* SymbolFlagsVariable | SymbolFlagsProperty | SymbolFlagsEnumMember | SymbolFlagsObjectLiteral | SymbolFlagsFunction | SymbolFlagsClass | SymbolFlagsEnum | SymbolFlagsValueModule | SymbolFlagsMethod | SymbolFlagsGetAccessor | SymbolFlagsSetAccessor */ 111551;
+public static SymbolFlags SymbolFlagsType => /* SymbolFlagsClass | SymbolFlagsInterface | SymbolFlagsEnum | SymbolFlagsEnumMember | SymbolFlagsTypeLiteral | SymbolFlagsTypeParameter | SymbolFlagsTypeAlias */ 788968;
+public static SymbolFlags SymbolFlagsNamespace => /* SymbolFlagsValueModule | SymbolFlagsNamespaceModule | SymbolFlagsEnum */ 1920;
+public static SymbolFlags SymbolFlagsModule => /* SymbolFlagsValueModule | SymbolFlagsNamespaceModule */ 1536;
+public static SymbolFlags SymbolFlagsAccessor => /* SymbolFlagsGetAccessor | SymbolFlagsSetAccessor */ 98304;
+public static SymbolFlags SymbolFlagsFunctionScopedVariableExcludes => /* SymbolFlagsValue & ^SymbolFlagsFunctionScopedVariable */ 111550;
+public static SymbolFlags SymbolFlagsBlockScopedVariableExcludes => /* SymbolFlagsValue */ 111551;
+public static SymbolFlags SymbolFlagsParameterExcludes => /* SymbolFlagsValue */ 111551;
+public static SymbolFlags SymbolFlagsPropertyExcludes => /* SymbolFlagsValue & ^(SymbolFlagsProperty | SymbolFlagsAccessor) */ 13243;
+public static SymbolFlags SymbolFlagsEnumMemberExcludes => /* SymbolFlagsValue | SymbolFlagsType */ 900095;
+public static SymbolFlags SymbolFlagsFunctionExcludes => /* SymbolFlagsValue & ^(SymbolFlagsFunction | SymbolFlagsValueModule | SymbolFlagsClass) */ 110991;
+public static SymbolFlags SymbolFlagsClassExcludes => /* (SymbolFlagsValue | SymbolFlagsType) & ^(SymbolFlagsValueModule | SymbolFlagsInterface | SymbolFlagsFunction) */ 899503;
+public static SymbolFlags SymbolFlagsInterfaceExcludes => /* SymbolFlagsType & ^(SymbolFlagsInterface | SymbolFlagsClass) */ 788872;
+public static SymbolFlags SymbolFlagsRegularEnumExcludes => /* (SymbolFlagsValue | SymbolFlagsType) & ^(SymbolFlagsRegularEnum | SymbolFlagsValueModule) */ 899327;
+public static SymbolFlags SymbolFlagsConstEnumExcludes => /* (SymbolFlagsValue | SymbolFlagsType) & ^SymbolFlagsConstEnum */ 899967;
+public static SymbolFlags SymbolFlagsValueModuleExcludes => /* SymbolFlagsValue & ^(SymbolFlagsFunction | SymbolFlagsClass | SymbolFlagsRegularEnum | SymbolFlagsValueModule) */ 110735;
+public static SymbolFlags SymbolFlagsNamespaceModuleExcludes => /* SymbolFlagsNone */ 0;
+public static SymbolFlags SymbolFlagsMethodExcludes => /* SymbolFlagsValue & ^SymbolFlagsMethod */ 103359;
+public static SymbolFlags SymbolFlagsGetAccessorExcludes => /* SymbolFlagsValue & ^(SymbolFlagsSetAccessor | SymbolFlagsProperty) */ 46011;
+public static SymbolFlags SymbolFlagsSetAccessorExcludes => /* SymbolFlagsValue & ^(SymbolFlagsGetAccessor | SymbolFlagsProperty) */ 78779;
+public static SymbolFlags SymbolFlagsAccessorExcludes => /* SymbolFlagsValue & ^SymbolFlagsProperty */ 111547;
+public static SymbolFlags SymbolFlagsTypeParameterExcludes => /* SymbolFlagsType & ^SymbolFlagsTypeParameter */ 526824;
+public static SymbolFlags SymbolFlagsTypeAliasExcludes => /* SymbolFlagsType */ 788968;
+public static SymbolFlags SymbolFlagsAliasExcludes => /* SymbolFlagsAlias */ 2097152;
+public static SymbolFlags SymbolFlagsModuleMember => /* SymbolFlagsVariable | SymbolFlagsFunction | SymbolFlagsClass | SymbolFlagsInterface | SymbolFlagsEnum | SymbolFlagsModule | SymbolFlagsTypeAlias | SymbolFlagsAlias */ 2623475;
+public static SymbolFlags SymbolFlagsExportHasLocal => /* SymbolFlagsFunction | SymbolFlagsClass | SymbolFlagsEnum | SymbolFlagsValueModule */ 944;
+public static SymbolFlags SymbolFlagsBlockScoped => /* SymbolFlagsBlockScopedVariable | SymbolFlagsClass | SymbolFlagsEnum */ 418;
+public static SymbolFlags SymbolFlagsPropertyOrAccessor => /* SymbolFlagsProperty | SymbolFlagsAccessor */ 98308;
+public static SymbolFlags SymbolFlagsClassMember => /* SymbolFlagsMethod | SymbolFlagsAccessor | SymbolFlagsProperty */ 106500;
+public static SymbolFlags SymbolFlagsExportSupportsDefaultModifier => /* SymbolFlagsClass | SymbolFlagsFunction | SymbolFlagsInterface */ 112;
+public static SymbolFlags SymbolFlagsExportDoesNotSupportDefaultModifier => /* ^SymbolFlagsExportSupportsDefaultModifier */ 4294967183;
+public static SymbolFlags SymbolFlagsLateBindingContainer => /* SymbolFlagsClass | SymbolFlagsInterface | SymbolFlagsTypeLiteral | SymbolFlagsObjectLiteral | SymbolFlagsFunction */ 6256;
+
+} // end ast_package

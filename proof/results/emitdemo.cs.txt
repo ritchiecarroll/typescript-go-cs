@@ -1,0 +1,155 @@
+file good.ts (620 bytes)
+skipped false, diagnostics 0, outputs 2
+emit /main.d.ts (172 bytes)
+interface Point {
+    x: number;
+    y: number;
+}
+export declare class Path<T extends Point> {
+    private pts;
+    add(p: T): this;
+    get length(): number;
+}
+export {};
+
+--- end /main.d.ts
+emit /main.js (484 bytes)
+function dist(a, b) {
+    const dx = a.x - b.x, dy = a.y - b.y;
+    return Math.sqrt(dx * dx + dy * dy);
+}
+export class Path {
+    pts = [];
+    add(p) { this.pts.push(p); return this; }
+    get length() {
+        let n = 0;
+        for (let i = 1; i < this.pts.length; i++)
+            n += dist(this.pts[i - 1], this.pts[i]);
+        return n;
+    }
+}
+const p = new Path().add({ x: 0, y: 0 }).add({ x: 3, y: 4 });
+console.log(`length=${p.length}`, p instanceof Path ? "ok" : "no");
+
+--- end /main.js
+file bad.ts (38 bytes)
+skipped false, diagnostics 0, outputs 2
+emit /main.d.ts (78 bytes)
+declare function f({ return: , 1:  }: {
+    1: any;
+    return: any;
+}): any;
+
+--- end /main.d.ts
+emit /main.js (59 bytes)
+"use strict";
+let = ;
+function f({ return: , 1:  }) { }
++;
+
+--- end /main.js
+file emit.ts (1510 bytes)
+skipped false, diagnostics 0, outputs 2
+emit /main.d.ts (1206 bytes)
+export declare enum Color {
+    Red = 0,
+    Green = 4,
+    Blue = 5
+}
+export declare const enum Flags {
+    None = 0,
+    A = 1,
+    B = 2,
+    AB = 3
+}
+export declare namespace Geometry {
+    interface Vec {
+        x: number;
+        y: number;
+    }
+    const origin: Vec;
+    function add(a: Vec, b: Vec): Vec;
+    namespace Inner {
+        let depth: number;
+    }
+}
+export declare abstract class Shape {
+    #private;
+    readonly name: string;
+    protected sides?: number | undefined;
+    static count: number;
+    constructor(name: string, sides?: number | undefined);
+    abstract area(): number;
+    get id(): number;
+}
+export declare class Square extends Shape {
+    private side;
+    constructor(side: number);
+    area(): number;
+}
+export declare function pick(x: string): string;
+export declare function pick(x: number): number;
+export declare function load<T extends object>(f: () => Promise<T>): Promise<Partial<T> | undefined>;
+export declare function range(n: number): Generator<number, void, unknown>;
+export type Mapped<T> = {
+    readonly [K in keyof T]?: T[K] extends Function ? never : T[K];
+};
+declare let tuple: [a: string, b?: number, ...rest: boolean[]];
+export default tuple;
+
+--- end /main.d.ts
+emit /main.js (1381 bytes)
+// Emit-heavy sample: enums, namespaces, parameter properties, overloads, generics, async, private names.
+export var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 4] = "Green";
+    Color[Color["Blue"] = 5] = "Blue";
+})(Color || (Color = {}));
+export var Geometry;
+(function (Geometry) {
+    Geometry.origin = { x: 0, y: 0 };
+    function add(a, b) { return { x: a.x + b.x, y: a.y + b.y }; }
+    Geometry.add = add;
+    let Inner;
+    (function (Inner) {
+        Inner.depth = 2;
+    })(Inner = Geometry.Inner || (Geometry.Inner = {}));
+})(Geometry || (Geometry = {}));
+export class Shape {
+    name;
+    sides;
+    #id;
+    static count = 0;
+    constructor(name, sides) {
+        this.name = name;
+        this.sides = sides;
+        this.#id = ++Shape.count;
+    }
+    get id() { return this.#id; }
+}
+export class Square extends Shape {
+    side;
+    constructor(side) {
+        super("square", 4);
+        this.side = side;
+    }
+    area() { return this.side ** 2; }
+}
+export function pick(x) { return x ?? 3 /* Flags.AB */; }
+export async function load(f) {
+    try {
+        const v = await f();
+        return v?.constructor ? { ...v } : undefined;
+    }
+    catch {
+        return undefined;
+    }
+    finally { }
+}
+export function* range(n) { for (let i = 0; i < n; i++)
+    yield i; }
+let tuple = ["x"];
+export default tuple;
+
+--- end /main.js

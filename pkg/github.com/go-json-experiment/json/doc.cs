@@ -1,0 +1,14 @@
+// Copyright 2020 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+namespace go.github.com.go_json_experiment;
+
+partial class json_package {
+
+partial struct requireKeyedLiterals {
+}
+
+partial struct nonComparable /*[0]Action*/;
+
+} // end json_package
